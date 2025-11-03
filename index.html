@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paseo en Hogsmeade</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://i.imgur.com/KEH5MKo.jpeg') no-repeat center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-family: 'Georgia', serif;
+            text-shadow: 2px 2px 6px #000;
+            background-attachment: fixed;
+        }
+
+        .carta {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 25px;
+            border-radius: 15px;
+            max-width: 85%;
+            text-align: center;
+            margin-bottom: 25px;
+            animation: aparecer 2s ease-in-out;
+        }
+
+        @keyframes aparecer {
+            from { opacity: 0; transform: scale(0.7); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .boton-sorpresa {
+            background: #d4a373;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            color: #3b2822;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .boton-sorpresa:hover {
+            background: #e6c18d;
+        }
+
+        #mensaje-sorpresa {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="carta">
+        <h2>Un Paseo Mágico por Hogsmeade</h2>
+        <p>
+            Mi querida Valeria Isabel petro Villazón,<br><br>
+            Si pudiera invitarte al lugar más mágico del mundo,  
+            sin duda sería Hogsmeade en invierno.<br><br>
+
+            Caminar juntos por calles nevadas,  
+            compartir una cerveza de mantequilla  
+            y perder la noción del tiempo solo con tu risa.<br><br>
+
+            Porque contigo, hasta el clima más frío  
+            se convierte en algo cálido para el corazón.
+        </p>
+
+        <button class="boton-sorpresa" onclick="mostrarSorpresa()">🎁 Sorpresa ✨</button>
+
+        <div id="mensaje-sorpresa">
+            Revisa mi bolsillo de la chaqueta...<br><br>
+            Te amo mucho, mi princesa hermosa.<br>
+            Si volviéramos hace 2 meses,<br>
+            te volvería a amar sin dudar.<br><br>
+            No me arrepiento de nada contigo,<br>
+            y lo volvería a elegir una y otra vez.<br><br>
+            ❤️
+        </div>
+    </div>
+
+    <script>
+        function mostrarSorpresa() {
+            document.getElementById('mensaje-sorpresa').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
